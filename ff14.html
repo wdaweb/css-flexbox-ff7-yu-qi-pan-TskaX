@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: '微軟正黑體';
+        }
+
+        body {
+            background: url(./ff7_flexbox/bg-full.jpg);
+        }
+
+        .container {
+            margin: auto;
+            width: 80vw;
+            height: 80vh;
+            margin-top: 90px;
+        }
+
+        .row {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .left {
+            height: 100%;
+            width: 50%;
+            background: url(./ff7_flexbox/main.jpg) no-repeat center/cover;
+            color: white;
+            justify-content: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .content-left {
+            height: 50%;
+            width: 50%;
+            text-align: center;
+        }
+
+        .right-top {
+            height: 50%;
+            width: 50%;
+            background: url(./ff7_flexbox/cloud.png) no-repeat center/40%;
+            background-position: 580px 45px;
+            background-color: #ccc;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .content-right-top {
+            width: 60%;
+            height: 50%;
+            padding-left: 5%;
+        }
+
+        .right-bottom {
+            width: 50%;
+            height: 50%;
+            background: url(./ff7_flexbox/tifa.png) no-repeat left/40%;
+            background-position: 20px 70px;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .content-right-bottom {
+            width: 60%;
+            height: 50%;
+            padding-right: 5%;
+        }
+
+        img {
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col left">
+                <div class="content-left">
+                    <img src="./ff7_flexbox/ps4-ff7.png" alt="">
+                    <h1>AVAILABEL NOW</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum dolor, pariatur dolores,
+                        officia
+                        inventore
+                    </p>
+                </div>
+            </div>
+            <div class="col right-top">
+                <div class="content-right-top">
+                    <h1>Cloud</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda corrupti dolor, reiciendis
+                        ullam
+                        officiis magni eveniet vitae voluptatem provident ratione modi inventore repudiandae neque odit
+                    </p>
+                </div>
+            </div>
+            <div class="col right-bottom">
+                <div class="content-right-bottom">
+                    <h1>Tifa</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi culpa veniam ducimus laboriosam
+                        excepturi nemo incidunt illum perferendis minus explicabo maxime corrupti deleniti quidem, harum
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

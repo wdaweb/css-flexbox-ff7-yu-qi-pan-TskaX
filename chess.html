@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: '標楷體';
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container .intro {
+            writing-mode: vertical-lr;
+            font-size: 2.7rem;
+        }
+
+        .chess {
+            width: 822px;
+            height: 822px;
+            border: 1px solid black;
+            margin: 0 2rem;
+            padding: 50px 0px;
+            position: relative;
+        }
+
+        .rol {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rol-text {
+            width: 78%;
+            height: 80px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .rol-text p {
+            font-size: 3rem;
+        }
+
+        .col {
+            width: 80px;
+            height: 80px;
+            border: 1px solid black;
+        }
+
+        .rol-line-top {
+            width: 224px;
+            height: 1px;
+            background-color: black;
+            position: absolute;
+            top: 15.8%;
+            left: 36.2%;
+            transform: rotate(45deg);
+        }
+
+        .rol-line-top::after {
+            content: '';
+            width: 224px;
+            height: 1px;
+            background-color: black;
+            position: absolute;
+            top: 0%;
+            left: 0.5%;
+            transform: rotate(90deg);
+        }
+
+        .rol-line-bottom {
+            width: 224px;
+            height: 1px;
+            background-color: black;
+            position: absolute;
+            bottom: 15.8%;
+            left: 36.2%;
+            transform: rotate(45deg);
+        }
+
+        .rol-line-bottom::after {
+            content: '';
+            width: 224px;
+            height: 1px;
+            background-color: black;
+            position: absolute;
+            top: 0%;
+            left: 0.5%;
+            transform: rotate(90deg);
+        }
+
+        .col-chess {
+            display: flex;
+            position: absolute;
+            width: 88%;
+            height: 7%;
+
+        }
+
+        .chess-black {
+            width: 8%;
+            height: 100%;
+            border: 1px solid black;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 40px;
+            background-color: white;
+            line-height: 130%;
+        }
+
+        .blackChess-position-one {
+            top: 3%;
+            left: 6%;
+            justify-content: space-around;
+        }
+
+        .blackChess-position-two {
+            top: 22.5%;
+            left: 6%;
+            justify-content: space-between;
+        }
+
+        .blackChess-position-two .chess-black {
+            margin-right: 12.8%;
+            margin-left: 12.8%;
+        }
+
+        .blackChess-position-three {
+            top: 32%;
+            left: 6%;
+            justify-content: space-between;
+        }
+
+        .blackChess-position-three .chess-black {
+            margin-right: 1.5%;
+            margin-left: 1.5%;
+        }
+
+        .chess-red {
+            width: 8%;
+            height: 100%;
+            border: 1px solid black;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 40px;
+            background-color: white;
+            line-height: 130%;
+            color: red;
+        }
+
+        .redChess-position-one {
+            bottom: 3%;
+            left: 6%;
+            justify-content: space-around;
+        }
+
+        .redChess-position-two {
+            bottom: 22.5%;
+            left: 6%;
+            justify-content: space-between;
+        }
+
+        .redChess-position-two .chess-red {
+            margin-right: 12.8%;
+            margin-left: 12.8%;
+        }
+
+        .redChess-position-three {
+            bottom: 32%;
+            left: 6%;
+            justify-content: space-between;
+        }
+
+        .redChess-position-three .chess-red {
+            margin-right: 1.5%;
+            margin-left: 1.5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p class="intro">棋盤裡，車無輪，馬無韁，叫聲將軍提防提防</p>
+        <div class="chess">
+            <div class="rol-line-top"></div>
+            <div class="rol-line-bottom"></div>
+            <div class="rol">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="rol">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="rol">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="rol">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="rol">
+                <div class="rol-text">
+                    <p>楚河</p>
+                    <p>漢界</p>
+                </div>
+            </div>
+            <div class="rol">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="rol">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="rol">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="rol">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="col-chess blackChess-position-one">
+                <div class="chess-black">車</div>
+                <div class="chess-black">馬</div>
+                <div class="chess-black">象</div>
+                <div class="chess-black">士</div>
+                <div class="chess-black">將</div>
+                <div class="chess-black">士</div>
+                <div class="chess-black">象</div>
+                <div class="chess-black">馬</div>
+                <div class="chess-black">車</div>
+            </div>
+            <div class="col-chess blackChess-position-two">
+                <div class="chess-black">包</div>
+                <div class="chess-black">包</div>
+            </div>
+            <div class="col-chess blackChess-position-three">
+                <div class="chess-black">卒</div>
+                <div class="chess-black">卒</div>
+                <div class="chess-black">卒</div>
+                <div class="chess-black">卒</div>
+                <div class="chess-black">卒</div>
+            </div>
+            <div class="col-chess redChess-position-one">
+                <div class="chess-red">俥</div>
+                <div class="chess-red">傌</div>
+                <div class="chess-red">相</div>
+                <div class="chess-red">士</div>
+                <div class="chess-red">帥</div>
+                <div class="chess-red">士</div>
+                <div class="chess-red">相</div>
+                <div class="chess-red">傌</div>
+                <div class="chess-red">俥</div>
+            </div>
+            <div class="col-chess redChess-position-two">
+                <div class="chess-red">炮</div>
+                <div class="chess-red">炮</div>
+            </div>
+            <div class="col-chess redChess-position-three">
+                <div class="chess-red">兵</div>
+                <div class="chess-red">兵</div>
+                <div class="chess-red">兵</div>
+                <div class="chess-red">兵</div>
+                <div class="chess-red">兵</div>
+            </div>
+        </div>
+        <p class="intro">圖畫裡，龍不吟，虎不嘯，小小書僮可笑可笑</p>
+    </div>
+</body>
+
+</html>
